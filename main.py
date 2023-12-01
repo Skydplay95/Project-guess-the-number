@@ -43,7 +43,7 @@ print("The number to guess is between 1 and 100.")
 number_to_guess = random.choice(range(1, 101))
 
 #user choose difficultys
-difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ")
+difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 attemps = user_difficulty(difficulty)
 #print amount of user attemps giving the difficulty choosen
 print(f"You have {attemps} remaing to guess right")
@@ -58,7 +58,9 @@ while not game_end:
 
     #if user guess attemps fall to 1, one more attemps and it's over
     if attemps == 1:
-        print(f"You ran out of attemps,the number was {number_to_guess}, you loose sorry")
+        print(
+            f"You ran out of attemps,the number was {number_to_guess}, you loose sorry"
+        )
         game_end = True
     #if user guess is wrong, minus 1 attempts
     elif guess(user_guess) != number_to_guess:
