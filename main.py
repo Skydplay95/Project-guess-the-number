@@ -46,7 +46,7 @@ number_to_guess = random.choice(range(1, 101))
 difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 attemps = user_difficulty(difficulty)
 #print amount of user attemps giving the difficulty choosen
-print(f"You have {attemps} remaing to guess right")
+print(f"You have {attemps} remaining to guess right")
 
 game_end = False
 #while loop to make multiple guess
